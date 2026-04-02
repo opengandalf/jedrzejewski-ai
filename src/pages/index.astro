@@ -1,0 +1,832 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base>
+  <!-- Nav -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">Bartosz Jedrzejewski</a>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-layout fade-in">
+      <div class="hero-content">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name"><span class="gradient-text">Bartosz Jedrzejewski</span></h1>
+        <p class="hero-title">Engineering Manager at <strong>Meta Superintelligence Labs</strong></p>
+        <p class="hero-subtitle">
+          Building the data infrastructure behind Meta's generative AI - web crawlers, synthetic data pipelines, and agent infrastructure.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">🏆 Polish Math Olympiad Finalist</span>
+          <span class="badge">🤖 Early interest in NLP/ML</span>
+          <span class="badge">♟️ <a href="https://ratings.fide.com/profile/1178326" target="_blank" rel="noopener" class="badge-link">FIDE rated chess player</a></span>
+          <span class="badge">🎓 MSc Oxford</span>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/bjedrzejewski" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/bartoszjedrzejewski" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="/headshot.png" alt="Bartosz Jedrzejewski" />
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">About</h2>
+      <div class="about-grid fade-in">
+        <div class="about-text">
+          <p>
+            I'm an Engineering Manager at Meta's Superintelligence Labs in London, where I lead teams building the data infrastructure that powers Meta's generative AI efforts. My teams work on Meta's web crawler, synthetic data generation, and infrastructure for AI agents.
+          </p>
+          <p>
+            Before moving into management, I spent a decade as a software engineer across fintech, consulting, and big tech - working my way from financial risk systems to scaling ads infrastructure at Meta.
+          </p>
+          <p>
+            I studied Mathematical Science at City University London and Computer Science at the University of Oxford, where I also played chess competitively. Before that, I was a finalist in the Polish Mathematical Olympiad - a formative experience that shaped how I think about problems.
+          </p>
+          <p>
+            Outside of work, I'm passionate about board games, indie video games, sim racing, D&D, and F1. I also build things - including <a href="https://thedicedrop.com">The Dice Drop</a> and <a href="https://indiegamedrop.gg">Indie Game Drop</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Software Engineering Manager</h3>
+              <span class="timeline-company">Meta - Superintelligence Labs</span>
+            </div>
+            <span class="timeline-date">Dec 2022 - Present</span>
+            <p>Leading teams in MSL building data infrastructure for generative AI: Meta's web crawler, synthetic data generation, and AI agent infrastructure. Previously supported a Monetization team focused on data ingestion into the Meta Catalog.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Software Engineer</h3>
+              <span class="timeline-company">Meta</span>
+            </div>
+            <span class="timeline-date">Mar 2020 - Dec 2022</span>
+            <p>Software engineering across Meta's ads and monetization infrastructure in London.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker timeline-marker-muted"></div>
+          <div class="timeline-content timeline-content-muted">
+            <div class="timeline-header">
+              <h3>Earlier Career</h3>
+            </div>
+            <span class="timeline-date">2009 - 2020</span>
+            <p>Technical Principal at Scott Logic, Product Architect at Lombard Risk. A decade of software engineering across financial services, consulting, and enterprise delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card fade-in">
+          <div class="edu-icon">🎓</div>
+          <h3>MSc Computer Science</h3>
+          <p class="edu-school">University of Oxford</p>
+          <span class="timeline-date">2010 - 2011</span>
+          <p class="edu-thesis">MSc thesis: Financial sentiment analysis using NLP techniques - an early interest in what would later become the AI wave.</p>
+        </div>
+        <div class="edu-card fade-in">
+          <div class="edu-icon">📐</div>
+          <h3>BSc Mathematical Science with Computer Science</h3>
+          <p class="edu-school">City University London</p>
+          <span class="timeline-date">2007 - 2010</span>
+          <p class="edu-thesis">Two-time recipient of the Tanner Memorial Prize for outstanding achievements in mathematical science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in">Projects</h2>
+      <p class="section-subtitle fade-in">Things I build in my spare time</p>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-emoji">🎲</div>
+          <h3>The Dice Drop</h3>
+          <p>Board game media platform - website + AI-powered Twitter presence covering board games, D&D, RPGs, and crowdfunding campaigns.</p>
+          <div class="project-links">
+            <a href="https://thedicedrop.com" target="_blank" rel="noopener">Website →</a>
+            <a href="https://x.com/TheDiceDrop" target="_blank" rel="noopener">@TheDiceDrop</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-emoji">🎮</div>
+          <h3>Indie Game Drop</h3>
+          <p>Indie game discovery platform tracking 83,000+ games. Rising stars, hidden gems, market trends, and weekly reports from Steam's indie scene.</p>
+          <div class="project-links">
+            <a href="https://indiegamedrop.gg" target="_blank" rel="noopener">Website →</a>
+            <a href="https://x.com/IndieGameDrop" target="_blank" rel="noopener">@IndieGameDrop</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-emoji">🚂</div>
+          <h3>LiveRail London</h3>
+          <p>iOS app for fast London journey planning across Tube, National Rail, DLR, Overground, and Elizabeth line. Real-time platform numbers, live train status, and disruption alerts.</p>
+          <div class="project-links">
+            <a href="https://apps.apple.com/gb/app/liverail-london/id6759470300" target="_blank" rel="noopener">App Store →</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-emoji">✍️</div>
+          <h3>e4developer.com</h3>
+          <p>Tech blog covering microservices, distributed systems, Spring Boot, Kubernetes, and software engineering career growth.</p>
+          <div class="project-links">
+            <a href="https://e4developer.com" target="_blank" rel="noopener">Read →</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-emoji">📄</div>
+          <h3>The Journey to DevOps</h3>
+          <p>White paper on DevOps adoption, maturity assessment, and practical advice for organisations - particularly in the public sector.</p>
+          <div class="project-links">
+            <a href="https://blog.scottlogic.com/2019/03/25/the-journey-to-devops.html" target="_blank" rel="noopener">Read →</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <div class="project-emoji">♟️</div>
+          <h3>Chess Spark Miner</h3>
+          <p>Open-source tool for analysing chess game datasets from Lichess using Apache Spark. Big data meets chess.</p>
+          <div class="project-links">
+            <a href="https://github.com/bjedrzejewski/chess-spark-miner" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://blog.scottlogic.com/2017/09/01/apache-spark-meets-chess.html" target="_blank" rel="noopener">Article →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title fade-in" style="text-align: center;">Get in Touch</h2>
+      <div class="contact-content fade-in">
+        <p>I'm always open to interesting conversations about AI infrastructure, engineering management, board games, or side projects.</p>
+        <div class="contact-links">
+          <a href="mailto:bartosz@jedrzejewski.ai" class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>bartosz@jedrzejewski.ai</span>
+          </a>
+          <a href="https://linkedin.com/in/bartoszjedrzejewski" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">💼</span>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/bjedrzejewski" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Bartosz Jedrzejewski</p>
+    </div>
+  </footer>
+</Base>
+
+<style>
+  /* Nav */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--text);
+  }
+
+  /* Hero */
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 8rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--glow-purple) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    flex: 1;
+  }
+
+  .hero-photo {
+    flex-shrink: 0;
+  }
+
+  .hero-photo img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    box-shadow: 0 0 40px var(--glow), 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .hero-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px var(--glow), 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-greeting {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title strong {
+    color: var(--text);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .badge {
+    background: color-mix(in srgb, var(--accent) 8%, var(--bg-card));
+    border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border));
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .badge:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 15%, var(--bg-card));
+  }
+
+  .badge-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .badge-link:hover {
+    color: var(--accent);
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    box-shadow: 0 4px 15px var(--glow);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 6px 25px var(--glow);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--bg-card);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Sections */
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section-alt {
+    background: var(--bg-card);
+    position: relative;
+  }
+
+  .section-alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.3;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* About */
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--border));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -2.35rem;
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg-card);
+    box-shadow: 0 0 12px var(--glow);
+  }
+
+  .timeline-marker-muted {
+    background: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  .timeline-content {
+    padding-left: 0.5rem;
+  }
+
+  .timeline-content-muted {
+    opacity: 0.7;
+  }
+
+  .timeline-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .timeline-company {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .timeline-date {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .timeline-content p {
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* Education */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .edu-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .edu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .edu-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .edu-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-school {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-thesis {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* Projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
+  }
+
+  .project-card:hover::before {
+    opacity: 1;
+  }
+
+  .project-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .coming-soon {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contact-content {
+    text-align: center;
+  }
+
+  .contact-content > p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .contact-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .contact-icon {
+    font-size: 1.1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Nav right */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-direction: column;
+      padding: 1rem 1.5rem;
+      gap: 0.75rem;
+    }
+
+    .nav-links.open {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .hero-layout {
+      flex-direction: column-reverse;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero-photo img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .hero {
+      padding: 7rem 0 3rem;
+    }
+
+    .hero-name {
+      font-size: 2.2rem;
+    }
+
+    .hero-badges {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-links {
+      flex-direction: column;
+    }
+
+    .btn {
+      text-align: center;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .contact-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

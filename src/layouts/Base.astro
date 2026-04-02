@@ -1,0 +1,199 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Bartosz Jedrzejewski - Engineering Manager & Builder',
+  description = 'Personal site of Bartosz Jedrzejewski. Engineering Manager at Meta Superintelligence Labs. Builder of AI data infrastructure, indie game trackers, and board game media.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="canonical" href="https://jedrzejewski.ai" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jedrzejewski.ai" />
+    <meta property="og:image" content="https://jedrzejewski.ai/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://jedrzejewski.ai/og-image.png" />
+    <meta name="author" content="Bartosz Jedrzejewski" />
+    <meta name="robots" content="index, follow" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bartosz Jedrzejewski",
+      "url": "https://jedrzejewski.ai",
+      "image": "https://jedrzejewski.ai/headshot.png",
+      "jobTitle": "Software Engineering Manager",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Meta",
+        "url": "https://about.meta.com"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Oxford"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "City University London"
+        }
+      ],
+      "knowsAbout": ["AI", "Data Infrastructure", "Engineering Management", "Distributed Systems", "LLMs"],
+      "sameAs": [
+        "https://linkedin.com/in/bartoszjedrzejewski",
+        "https://github.com/bjedrzejewski",
+        "https://ratings.fide.com/profile/1178326"
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Theme toggle
+      const toggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+
+      html.setAttribute('data-theme', 'light');
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(a.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Hamburger menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+      }
+
+      // Scroll-triggered fade-in
+      const observer = new IntersectionObserver(
+        entries => entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        }),
+        { threshold: 0.05, rootMargin: '0px 0px 50px 0px' }
+      );
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+      // Immediately reveal anything already in viewport
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.fade-in').forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight) {
+            el.classList.add('visible');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #fafafa;
+    --bg-card: #ffffff;
+    --text: #1a1a2e;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --border: #e2e8f0;
+    --gradient-start: #3b82f6;
+    --gradient-end: #8b5cf6;
+    --glow: rgba(59, 130, 246, 0.1);
+    --glow-purple: rgba(139, 92, 246, 0.08);
+  }
+
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    background: var(--border);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+</style>
