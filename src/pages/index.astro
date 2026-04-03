@@ -14,6 +14,10 @@ import Base from '../layouts/Base.astro';
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -171,9 +175,17 @@ import Base from '../layouts/Base.astro';
           </div>
         </div>
         <div class="project-card fade-in">
+          <div class="project-emoji">⚔️</div>
+          <h3>BattleCast</h3>
+          <p>D&D 5e combat simulator with grid-based battles, Monte Carlo probability analysis, and smart AI opponents.</p>
+          <div class="project-links">
+            <a href="https://battlecast.gg" target="_blank" rel="noopener">Website →</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
           <div class="project-emoji">✍️</div>
           <h3>e4developer.com</h3>
-          <p>Tech blog covering microservices, distributed systems, Spring Boot, Kubernetes, and software engineering career growth.</p>
+          <p>My personal tech blog - revived in 2026. AI, side projects, and lessons from building software for over a decade.</p>
           <div class="project-links">
             <a href="https://e4developer.com" target="_blank" rel="noopener">Read →</a>
           </div>
@@ -746,6 +758,32 @@ import Base from '../layouts/Base.astro';
   }
 
   /* Hamburger */
+  /* Theme toggle */
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  [data-theme="dark"] .icon-moon { display: none; }
+  [data-theme="dark"] .icon-sun { display: block; }
+  [data-theme="light"] .icon-sun,
+  :root:not([data-theme]) .icon-sun { display: none; }
+  [data-theme="light"] .icon-moon,
+  :root:not([data-theme]) .icon-moon { display: block; }
+
   .hamburger {
     display: none;
     flex-direction: column;
