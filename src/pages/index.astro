@@ -175,19 +175,19 @@ import Base from '../layouts/Base.astro';
           </div>
         </div>
         <div class="project-card fade-in">
+          <img src="/e4developer-icon.png" alt="e4developer" class="project-icon" />
+          <h3>e4developer.com</h3>
+          <p>My personal tech blog - revived in 2026. AI, side projects, and lessons from building software for over a decade.</p>
+          <div class="project-links">
+            <a href="https://e4developer.com" target="_blank" rel="noopener">Read →</a>
+          </div>
+        </div>
+        <div class="project-card fade-in">
           <div class="project-emoji">⚔️</div>
           <h3>BattleCast</h3>
           <p>D&D 5e combat simulator with grid-based battles, Monte Carlo probability analysis, and smart AI opponents.</p>
           <div class="project-links">
             <a href="https://battlecast.gg" target="_blank" rel="noopener">Website →</a>
-          </div>
-        </div>
-        <div class="project-card fade-in">
-          <div class="project-emoji">✍️</div>
-          <h3>e4developer.com</h3>
-          <p>My personal tech blog - revived in 2026. AI, side projects, and lessons from building software for over a decade.</p>
-          <div class="project-links">
-            <a href="https://e4developer.com" target="_blank" rel="noopener">Read →</a>
           </div>
         </div>
         <div class="project-card fade-in">
@@ -667,6 +667,14 @@ import Base from '../layouts/Base.astro';
   .project-emoji {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+  }
+
+  .project-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
   }
 
   .project-card h3 {
